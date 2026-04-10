@@ -81,5 +81,5 @@ jobs:
             ❌ Pipeline Status: FAILED
  
             Please check SonarQube dashboard for details.
-          to: ${{ github.repository_owner }}@yourcompany.com
-          from: CI Pipeline <no-reply@yourcompany.com>
+          to: sungoku8386@gmail.com
+          from: CI Pipeline <vigneshmtinku@gmail.com>
