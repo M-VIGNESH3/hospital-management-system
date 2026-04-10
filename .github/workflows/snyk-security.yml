@@ -16,8 +16,8 @@ jobs:
     runs-on: sonar   # Can be self-hosted if needed
  
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      # - name: Checkout code
+      #   uses: actions/checkout@v4
 
       - name: security
         run: |
