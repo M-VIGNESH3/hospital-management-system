@@ -13,7 +13,7 @@ permissions:
  
 jobs:
   sonarqube:
-    runs-on: ubuntu-latest   # Can be self-hosted if needed
+    runs-on: sonar   # Can be self-hosted if needed
  
     steps:
       - name: Checkout code
