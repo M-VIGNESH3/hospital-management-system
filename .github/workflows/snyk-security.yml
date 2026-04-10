@@ -26,6 +26,6 @@ jobs:
         
         run: |
           cd backend
-          snyk auth "$SNYK_TOKEN"
+          
           snyk test > report.txt
           cat report.txt
