@@ -1,30 +1,32 @@
 name: Snyk Security Scan
- 
+
 on:
   push:
-    branches: [ "master" ]
+    branches: ["master"]
   pull_request:
-    branches: [ "master" ]
+    branches: ["master"]
   workflow_dispatch:
- 
+
 permissions:
-  pull-requests: read
   contents: read
- 
+  pull-requests: read
+
 jobs:
   snyk:
-    runs-on: sonar   # Can be self-hosted if needed
- 
-    steps:
-      # - name: Checkout code
-      #   uses: actions/checkout@v4
+    runs-on: sonar   # your self-hosted runner label
 
-      - name: security
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Verify Snyk installation
+        run: snyk --version
+
+      - name: Run Snyk security scan
+        # env:
+        #   SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         run: |
-          sudo su
-        # git clone -b master https://github.com/M-VIGNESH3/hospital-management-system.git
-          cd hospital-management-system
           cd backend
-          synk test > report.txt
-          cat report 
- 
+          snyk auth "$SNYK_TOKEN"
+          snyk test > report.txt
+          cat report.txt
