@@ -56,8 +56,8 @@ jobs:
             Branch: ${{ github.ref_name }}
  
             ✅ Pipeline Status: SUCCESS
-          to: ${{ github.repository_owner }}@yourcompany.com
-          from: CI Pipeline <no-reply@yourcompany.com>
+          to: sungoku8386@gmail.com
+          from: CI Pipeline <vigneshmtinku@gmail.com>
  
       # ❌ Email on FAILURE
       - name: Send failure mail
