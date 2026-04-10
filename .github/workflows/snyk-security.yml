@@ -1,0 +1,28 @@
+name: Snyk Security Scan
+ 
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:
+ 
+permissions:
+  pull-requests: read
+  contents: read
+ 
+jobs:
+  sonarqube:
+    runs-on: sonar   # Can be self-hosted if needed
+ 
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: security
+        run: |
+          git clone -b master https://github.com/M-VIGNESH3/hospital-management-system.git
+          cd hospital-management-system
+          synk test > report.txt
+          cat report 
+ 
