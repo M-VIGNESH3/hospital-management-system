@@ -23,8 +23,8 @@ jobs:
         run: snyk --version
 
       - name: Run Snyk security scan
-        # env:
-        #   SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         run: |
           cd backend
           snyk auth "$SNYK_TOKEN"
