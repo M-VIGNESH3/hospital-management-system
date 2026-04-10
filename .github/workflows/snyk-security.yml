@@ -22,7 +22,7 @@ jobs:
       - name: security
         run: |
           sudo su
-          git clone -b master https://github.com/M-VIGNESH3/hospital-management-system.git
+        # git clone -b master https://github.com/M-VIGNESH3/hospital-management-system.git
           cd hospital-management-system
           cd backend
           synk test > report.txt
