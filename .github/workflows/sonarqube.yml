@@ -76,7 +76,7 @@ jobs:
             Vulnerabilities or Quality Gate conditions were violated.
  
             Repository: ${{ github.repository }}
-            Branch: ${{ github.ref_name }}
+            Branch: ${{ github.ref_name }} 
  
             ❌ Pipeline Status: FAILED
  
